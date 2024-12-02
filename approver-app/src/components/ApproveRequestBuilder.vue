@@ -5,7 +5,7 @@ import { store } from '../services/store.ts'
 <template>
   <div class="greetings">
     <h1 class="green">Requested/Approved Updates Builder</h1>
-    <p v-if="store.selectedRequestedUpdate !== null">
+    <div v-if="store.selectedRequestedUpdate !== null">
       <h3>Requested Update</h3>
       <table class="table">
         <tbody>
@@ -27,8 +27,8 @@ import { store } from '../services/store.ts'
       <p class="text-center">
         <button type="button" class="btn btn-primary text-center" @click="store.submitApproveRequest()">Submit Request Approval</button>
       </p>
-    </p>
-    <p v-if="store.selectedApprovedRequest !== null">
+    </div>
+    <div v-if="store.selectedApprovedRequest !== null">
       <h3>Approved Update</h3>
       <table class="table">
         <tbody>
@@ -55,7 +55,7 @@ import { store } from '../services/store.ts'
         </tbody>
       </table>
       <h4>Update details</h4>
-    </p>
+    </div>
   </div>
 </template>
 

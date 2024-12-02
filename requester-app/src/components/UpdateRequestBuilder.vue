@@ -6,7 +6,7 @@ import { store } from '../services/store.ts'
   <div class="greetings">
     <h1 class="green">Update Request Builder</h1>
     <h3>Request Recipients</h3>
-    <p>
+    <div>
       <table class="table">
         <tbody>
           <tr v-for="requestRecipient in store.selectedRequestRecipients">
@@ -14,9 +14,9 @@ import { store } from '../services/store.ts'
           </tr>
         </tbody>
       </table>
-    </p>
+    </div>
     <h3>Request Template</h3>
-    <p v-if="store.selectedRequestTemplate !== null">
+    <div v-if="store.selectedRequestTemplate !== null">
       <form>
         <h4 class="font-weight-bold">{{ store.selectedRequestTemplate.type }}</h4>
         <table class="table">
@@ -30,10 +30,10 @@ import { store } from '../services/store.ts'
           </tbody>
         </table>
       </form>
-    </p>
-    <p class="text-center">
+    </div>
+    <div class="text-center">
       <button type="button" class="btn btn-primary text-center" @click="store.submitUpdateRequest()">Submit Update Requests</button>
-    </p>
+    </div>
   </div>
 </template>
 
